@@ -10,7 +10,7 @@ public class DataProviders {
 
 	@DataProvider
 	public String[][] loginData() throws IOException {
-		String path = ".\\testdata\\Data.xlsx";
+		String path = "./testdata/Data.xlsx";
 		ExcelUtils xlutil = new ExcelUtils(path, "Sheet1");
 		int totalrows = xlutil.getRowCount();
 		int totalcols = xlutil.getCellCount(1);

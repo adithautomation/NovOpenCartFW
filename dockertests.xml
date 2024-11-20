@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite" parallel="tests" thread-count="3">
+	
+	<groups>
+		<run>
+			<include name="Master" />
+			<!--<include name="Sanity" /> -->
+			<!--<include name="Regression" />-->
+			<!--<exclude name="" /> -->
+			<!-- <include name="Datadriven" />-->
+		</run>
+	</groups>
+	
+	<listeners>
+		<listener class-name="utilities.ExtentReporter" />
+	</listeners>
+	
+	<!-- Docker Environments -->
+	
+	<test name="linux-chrome" enabled="true">
+		<parameter name="os" value="linux"/>
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="testcases.TC1_Registration"/>
+		</classes>
+	</test>
+	
+	<test name="linux-firefox" enabled="true">
+		<parameter name="os" value="linux"/>
+		<parameter name="browser" value="firefox"/>
+		<classes>
+			<class name="testcases.TC2_Login"/>
+		</classes>
+	</test>
+		
+</suite>
+
+

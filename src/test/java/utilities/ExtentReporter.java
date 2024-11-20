@@ -34,7 +34,7 @@ public class ExtentReporter implements ITestListener {
         if (extent == null) {
             String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
             reportName = "Extent-Report-" + timeStamp + ".html";
-            String reportPath = System.getProperty("user.dir") + "\\reports\\" + reportName;
+            String reportPath = System.getProperty("user.dir") + "/reports/" + reportName;
 
             sparkReporter = new ExtentSparkReporter(reportPath);
             sparkReporter.config().setDocumentTitle("Automated Test Report");

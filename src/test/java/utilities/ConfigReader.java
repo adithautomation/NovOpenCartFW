@@ -8,7 +8,7 @@ public class ConfigReader {
     private Properties properties;
 
     public ConfigReader() {
-        try (FileInputStream input = new FileInputStream("src/test/resources/config.properties")) {
+        try (FileInputStream input = new FileInputStream("./src/test/resources/config.properties")) {
             properties = new Properties();
             properties.load(input);
         } catch (IOException e) {

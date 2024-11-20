@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test Suite" parallel="tests" thread-count="3">
+
+	<groups>
+		<run>
+			<!--<include name="Master" />
+			<include name="Sanity" />
+			<include name="Regression" />
+			<exclude name="Master" />-->
+			<include name="Datadriven" />
+			
+		</run>
+	</groups>
+
+	<listeners>
+		<listener class-name="utilities.ExtentReporter"></listener>
+	</listeners>
+
+	<test name="mac-chrome" enabled="true">
+		<parameter name="os" value="mac" />
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<!--<class name="testcases.TC1_Registration" />
+			<class name="testcases.TC2_Login" />-->
+			<class name="testcases.TC2_Loginddt" />
+		</classes>
+	</test>
+
+	<test name="mac-firefox" enabled="false">
+		<parameter name="os" value="mac" />
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="testcases.TC1_Registration" />
+			<class name="testcases.TC2_Login" />
+			<!--<class name="testcases.TC2_Loginddt" />-->
+		</classes>
+	</test>
+
+</suite> 
