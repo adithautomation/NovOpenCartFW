@@ -148,7 +148,7 @@
 					<reuseForks>true</reuseForks>
 					<!--argLine>-Xmx1024m -XX:MaxMetaspaceSize=512m</argLine> -->
 					<suiteXmlFiles>
-						<suiteXmlFile>localtest.xml</suiteXmlFile>
+						<suiteXmlFile>localtests.xml</suiteXmlFile>
 						<!--<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
 					</suiteXmlFiles>
 					<!--<argLine>
