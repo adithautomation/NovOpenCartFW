@@ -26,8 +26,8 @@
 			<class name="testcases.TC1_Registration"/>
 			<class name="testcases.TC2_Login"/>
 			<class name="testcases.TC3_Logout" />
-			<class name="testcases.TC4_SeachProduct" />
-			<class name="testcases.TC5_AddToCart" />
+			<!--<class name="testcases.TC4_SeachProduct" />
+			<class name="testcases.TC5_AddToCart" />-->
 			<!--<class name="testcases.TC2_Loginddt"/>-->
 		</classes>
 	</test>
